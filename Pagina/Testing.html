@@ -1,0 +1,1310 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGadget StoreMX</title>
+
+    <link rel="icon" href="imagenes/icono.ico" type="image/x-icon">
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333333;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+        }
+
+        section1 {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section2{
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 1200px;
+            left: 10px;
+
+        }
+        .sec {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 600px;
+             left: 10px;
+        }
+        .seco {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 600px;
+            left: 650px;
+        }
+        .secon {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 600px;
+            left: 1280px;
+        }
+        h2 {
+            color: #333;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .product {
+            flex: 0 0 100%;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+
+        nav {
+            background-color: #444;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+            font-weight: bold;
+        }
+        .contact-dropdown {
+            display: inline-block;
+        }
+
+        .contact-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .contact-dropdown:hover .contact-dropdown-content {
+            display: block;
+        }
+
+        .contact-dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .contact-dropdown-content a:hover {
+            background-color: #555;
+        }
+        html {
+    scroll-behavior: smooth;
+}
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: 2px solid #fff;
+	border-radius: 2rem;
+	background-color: #fff;
+	height: 4.4rem;
+	overflow: hidden;
+}
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #fff;
+		font-size: 3rem;
+	}
+    .main-content {
+	background-color: var(--background-color);
+}
+.container-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding: 3rem 0;
+}
+
+.card-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+
+	background-color: #fff;
+	border-radius: 1rem;
+	padding: 1.5rem 0;
+}
+
+.card-feature i {
+	font-size: 2.7rem;
+	color: var(--primary-color);
+}
+
+.feature-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.feature-content span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--dark-color);
+}
+
+.feature-content p {
+	color: #777;
+	font-weight: 500;
+}
+.container-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 3rem;
+}
+
+.card-product {
+	background-color: #fff;
+	padding: 2rem 3rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.container-img {
+	position: relative;
+}
+
+.container-img img {
+	width: 100%;
+}
+
+.container-img .discount {
+	position: absolute;
+	left: 0;
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 2px 1.2rem;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+.card-product:hover .discount {
+	background-color: #000;
+}
+
+.button-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+.button-group span {
+	border: 1px solid var(--primary-color);
+	padding: 0.8rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.button-group span:hover {
+	background-color: var(--primary-color);
+}
+
+.button-group span i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.button-group span:hover i {
+	color: #fff;
+}
+
+.card-product:hover .button-group {
+	z-index: 0;
+	right: -1rem;
+}
+
+.content-card-product {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, min-content);
+	row-gap: 1rem;
+}
+
+.stars {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+}
+
+.stars i {
+	font-size: 1.3rem;
+	color: var(--primary-color);
+}
+
+.content-card-product h3 {
+	grid-row: 2/3;
+	grid-column: 1/-1;
+
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.content-card-product h3:hover {
+	color: var(--primary-color);
+}
+
+.add-cart {
+	justify-self: start;
+	border: 2px solid var(--primary-color);
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-cart:hover {
+	background-color: var(--primary-color);
+}
+
+.add-cart i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.add-cart:hover i {
+	color: #fff;
+}
+
+.content-card-product .price {
+	justify-self: end;
+	align-self: center;
+
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+.content-card-product .price span {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #777;
+	margin-left: 0.5rem;
+}
+.add-cart {
+	justify-self: start;
+	border: 2px solid var(--primary-color);
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-cart:hover {
+	background-color: var(--primary-color);
+}
+
+.add-cart i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.add-cart:hover i {
+	color: #fff;
+}
+.top-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+	margin-bottom: 10rem;
+}
+
+.container-categories {
+	display: grid;
+	grid-template-columns: repeat(3, 2fr);
+	gap: 10rem;
+}
+
+.card-category {
+	height: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	gap: 2rem;
+}
+
+.category-kpop {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('Imagenes/mercanciaOficial.jpeg');
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.category-fanmade {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('Imagenes/fanmade.avif');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.category-goods {
+	background-image: linear-gradient(#00000080, #00000080),
+		 url('Imagenes/goods.jpeg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.card-category p {
+	font-size: 2.5rem;
+	color: #fff;
+	text-transform: capitalize;
+	position: relative;
+}
+
+.card-category p::after {
+	content: '';
+	width: 2.5rem;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+.card-category span {
+	font-size: 1.6rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+.card-category span:hover {
+	color: var(--primary-color);
+}
+    .top-products {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.container-options {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+
+.container-options span {
+	color: #777;
+	background-color: #fff;
+	padding: 0.7rem 3rem;
+	font-size: 1.4rem;
+	text-transform: capitalize;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.container-options span:hover {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.container-options span.active {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.container-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 3rem;
+}
+
+.card-product {
+	background-color: #fff;
+	padding: 2rem 3rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.container-img {
+	position: relative;
+}
+
+.container-img img {
+	width: 100%;
+}
+
+.container-img .discount {
+	position: absolute;
+	left: 0;
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 2px 1.2rem;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+.card-product:hover .discount {
+	background-color: #000;
+}
+
+.button-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+.button-group span {
+	border: 1px solid var(--primary-color);
+	padding: 0.8rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.button-group span:hover {
+	background-color: var(--primary-color);
+}
+
+.button-group span i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.button-group span:hover i {
+	color: #fff;
+}
+
+.card-product:hover .button-group {
+	z-index: 0;
+	right: -1rem;
+}
+
+.content-card-product {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, min-content);
+	row-gap: 1rem;
+}
+
+.stars {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+}
+
+.stars i {
+	font-size: 1.3rem;
+	color: var(--primary-color);
+}
+
+.content-card-product h3 {
+	grid-row: 2/3;
+	grid-column: 1/-1;
+
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.content-card-product h3:hover {
+	color: var(--primary-color);
+}
+
+.add-cart {
+	justify-self: start;
+	border: 2px solid var(--primary-color);
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-cart:hover {
+	background-color: var(--primary-color);
+}
+
+.add-cart i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.add-cart:hover i {
+	color: #fff;
+}
+
+.content-card-product .price {
+	justify-self: end;
+	align-self: center;
+
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+.content-card-product .price span {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #777;
+	margin-left: 0.5rem;
+}
+.category-Gaming {
+      background-image: url("imagenes/Talvez-copia.jpg");
+    }
+
+    .category-Vidadiaria {
+        background-image: url("imagenes/lmao.jpg");
+    }
+    .category-Casual {
+        background-image: url("imagenes/casuala.jpg");
+    }
+    .footer {
+        background-color: #333333;
+            color: #fff;
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	gap: 3rem;
+	justify-items: center;
+}
+
+.title-footer {
+	font-weight: 600;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: var(--dark-color);
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons span i {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.content p {
+	font-size: 1.4rem;
+	color: #fff;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #d2b495;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--dark-color);
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #eee;
+}
+
+.content button {
+	border: none;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.content button:hover {
+	background-color: var(--background-color);
+	color: var(--primary-color);
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+
+	border-top: 1px solid #d2b495;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+
+
+@media (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+
+	.hero {
+		padding: 2rem;
+	}
+
+	.customer-support {
+		display: none;
+	}
+
+	.content-shopping-cart {
+		display: none;
+	}
+
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #fff;
+		font-size: 3rem;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 25rem 0;
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem;
+	}
+
+	.card-feature {
+		padding: 2rem;
+	}
+
+	.heading-1 {
+		font-size: 2.4rem;
+	}
+
+	.card-category {
+		height: 12rem;
+	}
+
+	.card-category p {
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.card-category span {
+		font-size: 1.4rem;
+	}
+
+	.container-options {
+		align-items: center;
+	}
+
+	.container-options span {
+		text-align: center;
+		padding: 1rem 2rem;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 15rem);
+	}
+
+	.container-blogs {
+		overflow: hidden;
+		grid-template-columns: 1fr 1fr;
+
+		height: 52rem;
+	}
+
+	.menu-footer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+}
+.login-form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.form-box {
+    width: 300px;
+    padding: 40px;
+    background: #191919;
+    text-align: center;
+}
+
+.form-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-box input[type="text"], .form-box input[type="password"], .form-box button[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #756e86;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.form-box input[type="text"]:focus, .form-box input[type="password"]:focus {
+    width: 280px;
+    border-color: #ffffff;
+}
+
+.form-box button[type="submit"] {
+    border: 0;
+    background: #9090b3;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #6d6386;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.form-box button[type="submit"]:hover {
+    background: none;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <h1>TechGadget StoreMX</h1>    
+
+		
+        <nav>
+            <a href="#">Inicio</a>
+            <div class="contact-dropdown">
+                <a href="#">Contacto</a>
+                <div class="contact-dropdown-content">
+                    <a href="https://web.whatsapp.com/" target="_blank">Whatsapp</a>
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="mailto:TechGadgetStoreMXOficial@info.uas.edu.mx">TechGadgetStoreMXoficial@info.uas.edu.mx</a>
+                </div>
+            </div>
+			<div class="contact-dropdown">
+                <a href="#">Productos</a>
+                <div class="contact-dropdown-content">
+                    <a href="#">Laptops</a>
+                    <a href="#">Computadoras</a>
+                    <a href="#">Asistentes Inteligentes</a>
+                    <a href="#">Relojes Inteligentes</a>
+                    <a href="#">Accesorios de Computación</a>
+                    <a href="#">Audifonos</a>
+                    <a href="#">Bocinas</a>
+                    <a href="#">Gaming</a>
+                    <a href="#">Vida Diaria</a>
+                    <a href="#">Casual</a>
+                </div>
+            <a href="#">Tienda</a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+            </div>
+
+			<button id="openLoginFormBtn">
+				<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg> Iniciar Sesion
+			</button>
+			</button>
+		
+			<div class="login-form-container" id="loginFormContainer">
+				<form action="Testing.html" class="form-box animated fadeInUp">
+					<h1 class="form-title">Iniciar Sesión</h1>
+					<input type="text" placeholder="Usuario" autofocus>
+					<input type="password" placeholder="Contraseña">
+					<button type="submit">
+						Continuar
+					</button>
+				</form>
+			</div>
+        
+    
+    </header>
+<main class="main-content">
+    <section class="container container-features">
+        <div class="card-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" height="60 " width="60" viewBox="0 0 576 512"><path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/></svg>
+            <div class="feature-content">
+                <span>Envío gratuito a todo el pais</span>
+                <p>En pedido superior a $800</p>
+            </div>
+        </div>
+        <div class="card-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" height="70" width="70" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+            <div class="feature-content">
+                <span>Rembolso del 100%</span>
+                <p>En caso de daños o si el producto no cumple con tus expectativas, te devolvemos el 100% de tu dinero</p>
+            </div>
+        </div>
+        <div class="card-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" height="70" width="66" viewBox="0 0 192 512"><path d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"/></svg>
+            <div class="feature-content">
+                <span>Stock Amplio</span>
+                <p>Una gran variedad de productos, pregunta por el tuyo</p>
+            </div>
+        </div>
+
+        <div class="card-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" height="70" width="70" viewBox="0 0 640 512"><path d="M416 176c0 97.2-93.1 176-208 176c-38.2 0-73.9-8.7-104.7-23.9c-7.5 4-16 7.9-25.2 11.4C59.8 346.4 37.8 352 16 352c-6.9 0-13.1-4.5-15.2-11.1s.2-13.8 5.8-17.9l0 0 0 0 .2-.2c.2-.2 .6-.4 1.1-.8c1-.8 2.5-2 4.3-3.7c3.6-3.3 8.5-8.1 13.3-14.3c5.5-7 10.7-15.4 14.2-24.7C14.7 250.3 0 214.6 0 176C0 78.8 93.1 0 208 0S416 78.8 416 176zM231.5 383C348.9 372.9 448 288.3 448 176c0-5.2-.2-10.4-.6-15.5C555.1 167.1 640 243.2 640 336c0 38.6-14.7 74.3-39.6 103.4c3.5 9.4 8.7 17.7 14.2 24.7c4.8 6.2 9.7 11 13.3 14.3c1.8 1.6 3.3 2.9 4.3 3.7c.5 .4 .9 .7 1.1 .8l.2 .2 0 0 0 0c5.6 4.1 7.9 11.3 5.8 17.9c-2.1 6.6-8.3 11.1-15.2 11.1c-21.8 0-43.8-5.6-62.1-12.5c-9.2-3.5-17.8-7.4-25.2-11.4C505.9 503.3 470.2 512 432 512c-95.6 0-176.2-54.6-200.5-129zM228 72c0-11-9-20-20-20s-20 9-20 20V86c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1l0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4V280c0 11 9 20 20 20s20-9 20-20V266.2c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7V72z"/></svg>
+               <div class="feature-content">
+                   <span>Pagos Seguros</span>
+                   <p>Pagos en OXXO, PayPal, Tarjetas de credito y debito, Transferencias Bancarias</p>
+               </div>
+           </div>
+        </div>
+    </section>
+    <div class="section1">
+        <center><h2> Productos Destacados</h2></center> 
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="product">
+                    <img src="imagenes/Pulsera-removebg-preview.png" alt="carusel1">
+                    <h2>Xiaomi Pulsera Inteligente Mi Smart Band 8 Black Versión Global</h2>
+            <p>Adquierelo por solo: $649.00 MXN </p>
+            <button onclick="agregarAlCarrito">Agregar al Carrito</button>
+
+                </div>
+                <div class="product">
+                    <img src="imagenes/alexa-removebg-preview.png" alt="carusel2">
+                    <h2>Echo Dot con reloj (5ta generación, modelo 2022) | Bocina inteligente con reloj y Alexa</h2>
+            <p>Adquierelo por solo: $1549.00 MXN</p>
+            <button onclick="agregarAlCarrito">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="imagenes/soporte-removebg-preview.png" alt="carusel3">
+                    <h2>Soporte para auriculares para jugadores con RGB</h2>
+            <p>Adquierelo por solo: $349.00 MXN</p>
+                <button onclick="agregarAlCarrito">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="imagenes/powerbank-removebg-preview.png" alt="carusel4">
+                <h2>DURACELL Charge 10 | Powerbank móvil de 10.000 mAh | Compatible con iPhone, iPad, Samsung, Android y más | Cumple con la TSA Carry-on | USB-C, USB-A</h2>
+        <p>Adquierelo por solo: $825.00 MXN</p>
+            <button onclick="agregarAlCarrito">Agregar al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="imagenes/foco.png" alt="carusel5">
+            <h2>Focos Inteligentes | Compatibles con Alexa | Foco Led Wi-Fi E27 9W RGB Multicolor + Luz Blanca Fría y Cálida 2700K a 6500K, 800 Lumens | 2.4Ghz</h2>
+    <p>Adquierelo por solo: $400.00 MXN</p>
+        <button onclick="agregarAlCarrito">Agregar al Carrito</button>
+    </div>
+    <div class="product">
+        <img src="imagenes/makbu.png" alt="carusel6">
+        <h2>Apple MacBook Air con chip Apple M1 | Gris espacial</h2>
+<p>Adquierelo por solo: $20.529.00 MXN</p>
+    <button onclick="agregarAlCarrito">Agregar al Carrito</button>
+</div> 
+</div>
+    <section class="container specials">
+        <center>    <h1 class="heading-1">Ofertas especiales</h1></center> 
+
+        <div class="container-products">
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="imagenes/mochila.png" alt="funko" />
+                    <span class="discount">-25%</span>
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div>
+
+                    </div>
+                    <h3>Mochila Laptop impermeable e Inteligente</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price">$524 <span>$699</span></p>
+                </div>
+            </div>
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="imagenes/xd.jpg"
+                        alt="Jujutsu"
+                    />
+                    <span class="discount">-15%</span>
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Sony WH-1000XM4 Audífonos inalámbricos</h3>
+                    <span class="add-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="18" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    </span>
+                    <p class="price">$5099 <span>$5999</span></p>
+                </div>
+            </div>
+            <div class="card-product"> 
+                <div class="container-img">
+                    <img src="imagenes/gatos.jpg" alt="txt" />
+                    <span class="discount">-30%</span>
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Soporte para teléfono inteligente con ventosa para gatos y gatos</h3>
+                    <span class="add-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="18" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    </span>
+                    <p class="price">$412 <span>$589</span></p>
+                </div>
+            </div>
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="imagenes/silla.jpg" alt="silla" />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                     
+                    </div>
+                    <h3>OCELOT GAMING Silla Gamer OGS-01</h3>
+                    <span class="add-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="18" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    </span>
+                    <p class="price">$3,640 <span>$5200</span></p>
+                </div>
+            </div>
+        </div>
+        <section class="container top-categories">
+            <center><h2>  Echa un vistazo a nuestras Categorias Especiales</h2><svg xmlns="http://www.w3.org/2000/svg" height="50" width="42" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm407.4 75.5c5-11.8-7-22.5-19.3-18.7c-39.7 12.2-84.5 19-131.8 19s-92.1-6.8-131.8-19c-12.3-3.8-24.3 6.9-19.3 18.7c25 59.1 83.2 100.5 151.1 100.5s126.2-41.4 151.1-100.5zM160 120c-3.1 0-5.9 1.8-7.2 4.6l-16.6 34.7-38.1 5c-3.1 .4-5.6 2.5-6.6 5.5s-.1 6.2 2.1 8.3l27.9 26.5-7 37.8c-.6 3 .7 6.1 3.2 7.9s5.8 2 8.5 .6L160 232.5l33.8 18.3c2.7 1.5 6 1.3 8.5-.6s3.7-4.9 3.2-7.9l-7-37.8L226.4 178c2.2-2.1 3.1-5.3 2.1-8.3s-3.5-5.1-6.6-5.5l-38.1-5-16.6-34.7c-1.3-2.8-4.1-4.6-7.2-4.6zm192 0c-3.1 0-5.9 1.8-7.2 4.6l-16.6 34.7-38.1 5c-3.1 .4-5.6 2.5-6.6 5.5s-.1 6.2 2.1 8.3l27.9 26.5-7 37.8c-.6 3 .7 6.1 3.2 7.9s5.8 2 8.5 .6L352 232.5l33.8 18.3c2.7 1.5 6 1.3 8.5-.6s3.7-4.9 3.2-7.9l-7-37.8L418.4 178c2.2-2.1 3.1-5.3 2.1-8.3s-3.5-5.1-6.6-5.5l-38.1-5-16.6-34.7c-1.3-2.8-4.1-4.6-7.2-4.6z"/></svg></center>
+            <div class="container-categories">
+                <div class="card-category category-Gaming">
+                    <p>GAMING</p>
+                    <button onclick="agregarAlCarrito"><h2>VAMOS!</h2></button>
+                </div>
+                <div class="card-category category-Vidadiaria">
+                    <p>Vida Diaria</p>
+                    <button onclick="agregarAlCarrito"><h2>VAMOS!</h2></button>
+                </div>
+                <div class="card-category category-Casual">
+                    <p>Casual</p>
+                    <button onclick="agregarAlCarrito"><h2>VAMOS!</h2></button>
+                </div>
+            </div>
+        </section>
+
+
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Dirección:  Calle inventada 123 entre calle inventada 122 y calle inventada 124 Col. Centro
+							</li>
+							<li>Tel: 111 - 111 - 1111</li>
+							<li>Email Contacto: TechGadgetStoreMXOficial@info.uas.edu.mx</li>
+						</ul>
+						<div>
+					
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Tienda</p>
+						<ul>
+							<li><a href="#">Sobre la tienda</a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#"></a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Servicio de Entregas</a></li>
+						</ul>
+					</div>
+
+
+                    <div class="my-account">
+						<p class="title-footer">Generales</p>
+
+						<ul>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#">Politica de rembolsos</a></li>
+						</ul>
+					</div>
+				</div>
+
+		</footer>
+    <script>
+
+        setInterval(() => {
+            const wrapper = document.querySelector('.carousel-wrapper');
+            wrapper.style.transform = `translateX(-${100}%)`;
+            setTimeout(() => {
+                const firstProduct = wrapper.firstElementChild;
+                wrapper.appendChild(firstProduct);
+                wrapper.style.transition = 'none';
+                wrapper.style.transform = 'translateX(0)';
+                setTimeout(() => {
+                    wrapper.style.transition = 'transform 0.5s ease-in-out';
+                });
+            }, 500);
+        }, 3000); 
+    </script>
+<script>
+document.getElementById('openLoginFormBtn').addEventListener('click', function() {
+    document.getElementById('loginFormContainer').style.display = 'block';
+});
+</script>
+</html>
